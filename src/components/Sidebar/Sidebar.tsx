@@ -1,6 +1,50 @@
-import React from 'react'
+'use client'
+
+import Formulario from './Formulario';
+import Card from './Card';
+import React, { useState } from 'react';
+
+
+interface CardData {
+    id: number;
+    nome: string;
+  }
 
 export default function Sidebar() {
+    
+    const [cards, setCards] = useState<CardData[]>([]);
+
+  const adicionarCard = (nome: string) => {
+    setCards([...cards, { id: Date.now(), nome }]);
+  };
+
+  const editarCard = (id: number, novoNome: string) => {
+    setCards(
+      cards.map((card) =>
+        card.id === id ? { ...card, nome: novoNome } : card
+      )
+    );
+  };
+
+  const excluirCard = (id: number) => {
+    setCards(cards.filter((card) => card.id !== id));
+  };
+
+    
+    const [mostrarCaixaDeTexto, setMostrarCaixaDeTexto] = useState(false);
+      const [texto, setTexto] = useState('');
+    
+      const abrirCaixaDeTexto = () => {
+        setMostrarCaixaDeTexto(true);
+      };
+    
+      const fecharCaixaDeTexto = () => {
+        setMostrarCaixaDeTexto(false);
+      };
+    
+      const handleChangeTexto = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setTexto(event.target.value);
+      };
   return (
     <div className='p-1 flex flex-col gap-2 h-[90vh]'>
         <h1 className='text-green-400  text-3xl text-center py-6 bg-zinc-100 rounded-md'>
@@ -28,9 +72,37 @@ export default function Sidebar() {
                     </svg>
                     <h2 className='text-xl group-hover:text-zinc-500'>Biblioteca</h2>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 hover:text-zinc-500">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
+                <div>
+                    <button onClick={abrirCaixaDeTexto}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-7 h-7 hover:text-zinc-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    {mostrarCaixaDeTexto && (
+                        <div className="relative">
+                            <div className='absolute left-[50vh] px-10 py-3 flex flex-col gap-2 rounded-md bg-zinc-100 '>
+                                <p className='text-center text-lg'>Adicionar nova Playlist</p>
+                                <Formulario onAdicionar={adicionarCard}/>
+                                <button className='bg-green-400 text-white px-2 py-1 rounded-md hover:bg-green-700' onClick={fecharCaixaDeTexto}>Fechar</button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+            <div>
+                <div className="flex flex-col gap-2">
+                {cards.map((card) => (
+                <Card
+                    key={card.id}
+                    nome={card.nome}
+                    onEditar={() => {
+                    const novoNome = prompt('Novo nome:', card.nome);
+                    if (novoNome) editarCard(card.id, novoNome);
+                    }}
+                    onExcluir={() => excluirCard(card.id)}
+                />
+                ))}
+                </div>
             </div>
         </div>
     </div>
