@@ -1,4 +1,6 @@
-let musicas = [
+
+
+export const musicas = [
     {
         id: 1,
         titulo: "Evidências",
