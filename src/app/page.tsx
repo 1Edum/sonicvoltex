@@ -13,7 +13,7 @@ const Home: React.FC<PageProps> = () => {
         <aside className=" w-1/5">
           <Sidebar />
         </aside>
-        <main className="flex-1 bg-red-300 w-4/5 h-[90vh] px-5 bg-gradient-to-bl from-green-400 from-10% via-zinc-800 via-20% to-black to-90%">
+        <main className="flex-1 bg-red-300 w-4/5 h-[90vh] px-5 bg-gradient-to-tr from-zinc-100 from-40% to-green-400">
           <SectionTop />
           <Favorites />
         </main>

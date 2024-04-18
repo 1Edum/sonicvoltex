@@ -11,7 +11,7 @@ export default function Favorites() {
     <section className="flex flex-col">
       <div className="grid grid-rows-2 grid-flow-col gap-y-2 gap-x-4">
         {musicasSelecionadas.map((musica) => (
-          <div key={musica.id} className="bg-white px-2 py-1 w-full rounded-sm">
+          <div key={musica.id} className="bg-white bg-opacity-50 px-2 py-1 w-full rounded-sm hover:bg-opacity-100">
             <h4>{musica.titulo}</h4>
             <p className="text-xs">{musica.artista}</p>
           </div>
