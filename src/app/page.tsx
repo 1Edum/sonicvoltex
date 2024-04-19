@@ -1,9 +1,11 @@
 import Favorites from "@/components/Main/Favorites";
 import SectionTop from "@/components/Main/SectionTop";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import Teste from "@/app/Teste"
 
 interface PageProps {
   title: string;
+  imageUrl: string;
 }
 
 const Home: React.FC<PageProps> = () => {
@@ -18,6 +20,7 @@ const Home: React.FC<PageProps> = () => {
           <Favorites />
         </main>
       </div>
+      <Teste imagePath="path/to/your/image.jpg"/>
       <footer className="w-full h-full bg-red-400 ">fefe</footer>
     </div>
   );
