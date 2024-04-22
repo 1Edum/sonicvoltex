@@ -1,5 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+// next.config.mjs
 
-
-export default nextConfig;
+const nextConfig = {
+    images: {
+      domains: ['gs://sonicvoltex.appspot.com/'],
+    },
+  };
+  
+  export default nextConfig;
+  
