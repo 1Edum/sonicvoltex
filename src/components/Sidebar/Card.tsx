@@ -9,7 +9,12 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ nome, onEditar, onExcluir }) => {
   return (
     <div className="w-full flex justify-between items-center hover:bg-zinc-300 rounded-md p-2">
+      <div className='bg-red-500 w-6 h-4 flex items-center'>
+        <div className='bg-red-500 w-6 h-4'>
+
+        </div>
         <p className='group-hover:text-zinc-500'>{nome}</p>
+      </div>
         <div className='flex items-center gap-2'> 
             <button onClick={onEditar}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
