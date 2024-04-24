@@ -89,7 +89,7 @@ export default function Sidebar() {
                     )}
                 </div>
             </div>
-            <div className='overflow-y-auto h-[90%]'>
+            <div className='overflow-y-auto h-[600px]'>
                 <div className="flex flex-col gap-2">
                 {cards.map((card) => (
                 <Card

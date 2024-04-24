@@ -9,9 +9,8 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ nome, onEditar, onExcluir }) => {
   return (
     <div className="w-full flex justify-between items-center hover:bg-zinc-300 rounded-md p-2">
-      <div className='bg-red-500 w-6 h-4 flex items-center'>
-        <div className='bg-red-500 w-6 h-4'>
-
+      <div className='flex items-center'>
+        <div className='bg-green-400 rounded w-10 h-10 mr-3'>
         </div>
         <p className='group-hover:text-zinc-500'>{nome}</p>
       </div>
