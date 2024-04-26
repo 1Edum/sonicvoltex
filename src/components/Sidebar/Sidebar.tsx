@@ -47,7 +47,7 @@ export default function Sidebar() {
       };
   return (
     <div className='p-1 flex flex-col gap-2 h-[90vh]'>
-        <h1 className='text-green-400  text-3xl text-center py-6 bg-zinc-100 rounded-md'>
+        <h1 className='text-green-400 text-3xl text-center py-6 bg-zinc-100 rounded-md'>
             SonicVoltex
         </h1>
         <div className='py-2 bg-zinc-100 flex flex-col gap-2 px-2'>
