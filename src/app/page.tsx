@@ -12,16 +12,16 @@ interface PageProps {
 const Home: React.FC<PageProps> = () => {
   return (
     <div className="w-screen h-screen flex flex-col">
-      <div className="flex flex-1">
-        <aside className=" w-1/5">
+      <div className="md:flex md:flex-1">
+        <aside className=" md:w-1/5 w-screen">
           <Sidebar />
         </aside>
-        <main className="flex-1 bg-red-300 w-4/5 h-[90vh] bg-gradient-to-tr from-zinc-100 from-40% to-green-400">
+        <main className="flex-1  w-4/5 h-[90vh] bg-gradient-to-tr from-zinc-100 from-40% to-green-400">
           <section className="px-5">
             <SectionTop />
-            <Favorites />
+            
           </section>
-          <Card title="Teste"/>
+          
           
         </main>
       </div>
