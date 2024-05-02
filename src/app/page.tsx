@@ -19,15 +19,18 @@ const Home: React.FC<PageProps> = () => {
         <main className="flex-1  md:w-4/5 md:h-[90vh] w-screen bg-gradient-to-tr from-zinc-100 from-40% to-green-400">
           <section className="px-4">
               <SectionTop />
+              <div className="overflow-y-auto h-[600px]  mt-4">
               <Favorites />
-           
-            
+              <Card title="As melhores"/>
+              <Card title="As melhores"/>
+
+              </div>
           </section>
           
           
         </main>
       </div>
-      <footer className="w-full h-full bg-red-400 ">
+      <footer className="w-full h-full bg-red-400 z-20">
       </footer>
     
     </div>

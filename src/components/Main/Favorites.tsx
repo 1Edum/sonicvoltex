@@ -10,7 +10,7 @@ export default function Favorites() {
 
   return (
     <section className="flex flex-col overflow-x-auto">
-      <div className="grid grid-rows-2 grid-flow-col w-[800px] py-2 gap-y-1 md:gap-x-3 gap-x-1  h-1/4 ">
+      <div className="grid grid-rows-2 grid-flow-col w-[800px] gap-y-1 md:gap-x-3 gap-x-1 md:w-full h-1/4 ">
         {musicasSelecionadas.map((musica) => (
           <div key={musica.id} className="grid grid-cols-4 grid-rows-1 bg-white bg-opacity-50 group rounded-sm hover:bg-opacity-100">
             <img src={musica.img} alt="" className="row-span-2 w-full h-full"/>
