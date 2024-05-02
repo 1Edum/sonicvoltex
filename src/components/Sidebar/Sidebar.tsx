@@ -64,7 +64,7 @@ export default function Sidebar() {
                 <h2 className='text-xl group-hover:text-zinc-500'>Buscar</h2>
             </div>
         </div>
-        <div className='py-2 bg-zinc-100 flex flex-col gap-2 px-2 md:h-full h-1/4 z-0'>
+        <div className='py-2 bg-zinc-100 flex flex-col gap-2 px-2 md:h-full  z-0'>
             <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-3 group cursor-pointer'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8 group-hover:text-zinc-500">
@@ -89,7 +89,7 @@ export default function Sidebar() {
                     )}
                 </div>
             </div>
-            <div className='overflow-y-auto md:h-[600px] h-full'>
+            <div className='overflow-y-auto '>
                 <div className="md:flex flex-col gap-2 grid grid-cols-2">
                 {cards.map((card) => (
                 <Card

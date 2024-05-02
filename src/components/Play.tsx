@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Play() {
   return (
-    <div className="p-2 rounded-full bg-green-400">
+    <div className="p-2 rounded-full w-10 h-10 flex justify-center items-center bg-green-400">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
