@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Sidebar from "@/components/sidebar/sidebar";
 
 export const metadata: Metadata = {
   title: "SonicVoltex",
@@ -16,7 +14,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className="w-screen h-screen flex flex-col dark">
+        <div className="md:flex md:flex-1">
+          <aside className=" md:w-1/5 w-screen">
+            <Sidebar />
+          </aside>
+          {children}
+        </div>
+        <footer className="w-full h-full bg-red-400 z-20"></footer>
+      </body>
     </html>
   );
 }
