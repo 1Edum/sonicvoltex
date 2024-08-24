@@ -6,7 +6,18 @@
   :root {
     --color-primary: #f4f4f5;
     --color-primary-dark: #18181b;
-    
   }
 }
+@layer utilities {
+  /*Sidebar variables*/
 
+  .text-sidebar {
+    @apply  group-hover:text-zinc-400 dark:text-zinc-400 dark:group-hover:text-zinc-200;
+  }
+  .icon-sidebar {
+    @apply group-hover:text-zinc-400 dark:text-zinc-400 dark:group-hover:text-zinc-200;
+  }
+  .container-sidebar {
+    @apply flex items-center gap-3 cursor-pointer;
+  }
+}
