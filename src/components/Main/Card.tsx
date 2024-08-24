@@ -1,6 +1,6 @@
 import React from "react";
-import { musicas } from "@/Dados/Musicas";
-import Play from "../Play";
+import { musicas } from "../../data/Musicas";
+import Play from "../play";
 
 interface CardMusicasProps {
   title: string;
