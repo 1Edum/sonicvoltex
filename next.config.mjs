@@ -2,7 +2,11 @@
 
 const nextConfig = {
     images: {
-      domains: ['gs://sonicvoltex.appspot.com/'],
+      domains: [
+        'gs://sonicvoltex.appspot.com/',
+        'firebasestorage.googleapis.com'
+      ],
+
     },
   };
   
