@@ -1,28 +1,24 @@
 "use client";
 
-import Card from "@/components/main/card";
+import ListMusicsProps from "@/components/main/list-musics";
 import Favorites from "@/components/main/favorites";
 import SectionTop from "@/components/main/sectionTop";
 
 import { useState } from "react";
 
-interface PageProps {
-  title: string;
-  imageUrl: string;
-}
 
-const Home: React.FC<PageProps> = () => {
+const Home = () => {
   const [state, setState] = useState('light');
   return (
-    <main className={"flex-1  md:w-4/5 md:h-[90vh] w-screen bg-gradient-to-tr " + `${state === 'dark' ? 'from-zinc-900' : 'from-zinc-100'} from-40% to-green-400`}>
+    <section className={"flex-1 md:w-4/5 md:h-[90vh] w-screen bg-gradient-to-t " + `${state === 'dark' ? 'from-zinc-600' : 'from-zinc-100'} from-70% to-green-400`}>
+      <section className="overflow-y-auto h-[90vh] flex flex-col px-3 z-0">
       <SectionTop state={state} setState={setState} />
-      <section className="overflow-y-auto h-[600px]">
         <Favorites />
-        <Card title="As melhores" />
-        <Card title="As melhores" />
+        <ListMusicsProps title="As melhores" />
+        <ListMusicsProps title="As melhores" />
         <p>{state}</p>
       </section>
-    </main>
+    </section>
   );
 };
 export default Home;
