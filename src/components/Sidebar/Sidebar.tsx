@@ -110,7 +110,7 @@ export default function Sidebar() {
         <div className="overflow-y-auto">
           <div className="md:flex flex-col gap-2 grid grid-cols-2">
             {cards.map((card) => (
-              <CardRoot key={card.id}>
+              <CardRoot key={card.id} variant={"default"}>
                 <CardTitle title={card.nome} />
                 <CardActions>
                   <CardAction
