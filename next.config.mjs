@@ -1,14 +1,21 @@
 // next.config.mjs
 
 const nextConfig = {
-    images: {
-      domains: [
-        'gs://sonicvoltex.appspot.com/',
-        'firebasestorage.googleapis.com'
-      ],
-
-    },
-  };
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'firebasestorage.googleapis.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'sonicvoltex.appspot.com',
+        pathname: '/**',
+      },
+    ],
+  },
+}
   
   export default nextConfig;
   
