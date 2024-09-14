@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/sidebar/sidebar";
+import Footer from "@/components/footer/footer";
+
+
 
 export const metadata: Metadata = {
   title: "SonicVoltex",
@@ -14,14 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="w-screen h-screen flex flex-col dark">
-        <div className="md:flex md:flex-1">
-          <aside className=" md:w-1/5 w-screen">
+      <body className="w-screen h-screen flex flex-col ">
+        <main className="md:flex md:flex-1">
+          <aside className=" md:w-1/6 w-screen">
             <Sidebar />
           </aside>
           {children}
-        </div>
-        <footer className="w-full h-full bg-red-400 z-20"></footer>
+        </main>
+        <Footer />
       </body>
     </html>
   );
