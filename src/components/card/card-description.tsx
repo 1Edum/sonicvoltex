@@ -6,7 +6,7 @@ interface CardDescriptionProps{
 
 function CardDescription({description}: CardDescriptionProps) {
   return (
-    <div className='text-xs'>
+    <div className='text-xs text-sidebar'>
         {description}
     </div>
   )

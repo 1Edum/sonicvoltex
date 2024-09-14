@@ -6,7 +6,7 @@ interface CardTitleProps{
 
 function CardTitle({title}: CardTitleProps) {
   return (
-    <div className='text-sm text-sidebar'>
+    <div className='text-base text-sidebar'>
         {title}
     </div>
   )
