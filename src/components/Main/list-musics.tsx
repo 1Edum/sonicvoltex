@@ -16,11 +16,11 @@ const musicassugeridas = musicas.filter((musica) =>
 
 const ListMusics: React.FC<ListMusicsProps> = ({ title }) => {
   return (
-    <div className="pt-4">
-      <h1 className="text-xl">{title}</h1>
+    <div className="p-4 bg-zinc-100 dark:bg-zinc-900">
+      <h1 className="text-xl text-zinc-400">{title}</h1>
       <div className="grid grid-rows-1 grid-flow-col gap-x-1 object-cover">
         {musicassugeridas.map((musica) => (
-          <CardRoot key={musica.id} variant={"teste"}>
+          <CardRoot key={musica.id} variant={"musics"}>
             <div>
               <CardTitle title={musica.titulo} />
               <CardDescription description={musica.artista} />
